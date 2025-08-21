@@ -25,12 +25,6 @@ jobs:
           distribution: 'adopt'
           java-version: '11'
 
-      - name: Use the token
-        env:
-          GH_TOKEN: ${{ secrets.DK_CODE_TOKEN }}
-        run: |
-          gh api octocat
-
       - name: Create libs directory
         run: mkdir -p ./libs
 

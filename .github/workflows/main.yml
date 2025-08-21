@@ -32,8 +32,7 @@ jobs:
       - name: Download openai-code-review-sdk JAR
         env:
           GITHUB_TOKEN: ${{ secrets.DK_CODE_TOKEN }}
-        run: wget -O ./libs/openAI-code-review-sdk-2.0.0.jar \
-            https://github.com/dingkan/openAI-code-review/releases/download/v2.0.0/openAI-code-review-sdk-2.0.0.jar
+        run: wget -O ./libs/openAI-code-review-sdk-2.0.0.jar https://github.com/dingkan/openAI-code-review/releases/download/v2.0.0/openAI-code-review-sdk-2.0.0.jar
 
 
       - name: Get repository name

@@ -32,8 +32,14 @@ jobs:
       - name: Download openai-code-review-sdk JAR
         env:
           GITHUB_TOKEN: ${{ secrets.DK_CODE_TOKEN }}
-        run: wget -O ./libs/openAI-code-review-sdk-3.0.0.jar https://github.com/dingkan/openAI-code-review/releases/download/v3.0.0/openAI-code-review-sdk-3.0.0.jar
-
+        run: |
+          JAR_PATH="./libs/openAI-code-review-sdk-3.0.0.jar"
+          if [ -f "$JAR_PATH" ]; then
+            echo "✅ JAR 已经存在: $JAR_PATH"
+          else
+            echo "⬇️ JAR 不存在，开始下载..."
+            wget -O ./libs/openAI-code-review-sdk-3.0.0.jar https://github.com/dingkan/openAI-code-review/releases/download/v3.0.0/openAI-code-review-sdk-3.0.0.jar
+            fi
 
       - name: Get repository name
         id: repo-name

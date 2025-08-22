@@ -66,7 +66,7 @@ jobs:
           echo "Commit message is ${{ env.COMMIT_MESSAGE }}"      
 
       - name: Run Code Review
-        run: java -jar ./libs/openAI-code-review-sdk-3.0.0.jar
+        run: java -jar ./openAI-code-review/openAI-code-review-sdk-3.0.0.jar
         env:
           # Github 配置；GITHUB_REVIEW_LOG_URI「https://github.com/xfg-studio-project/openai-code-review-log」、GITHUB_TOKEN「https://github.com/settings/tokens」
           DK_GITHUB_REVIEW_LOG_URI: ${{ secrets.DK_GITHUB_REVIEW_LOG_URI }}

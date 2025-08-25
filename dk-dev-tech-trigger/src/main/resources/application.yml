@@ -1,0 +1,9 @@
+spring:
+  ai:
+    ollama:
+      base-url: http://127.0.0.1:11434
+      chat:
+        enbase: true
+        model: llama2
+server:
+  port: 8099

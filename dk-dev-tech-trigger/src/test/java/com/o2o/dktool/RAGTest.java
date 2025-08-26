@@ -1,7 +1,6 @@
 package com.o2o.dktool;
 
 import com.alibaba.fastjson.JSON;
-import groovy.util.logging.Log4j;
 import jakarta.annotation.Resource;
 import org.junit.Test;
 import org.junit.runner.RunWith;
